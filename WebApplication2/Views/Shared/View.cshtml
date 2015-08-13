@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div> 
+        <h1>viewbag</h1> @ViewBag.name
+        <h1>tempdata</h1> @TempData["Name"].ToString()
+    </div>
+</body>
+</html>

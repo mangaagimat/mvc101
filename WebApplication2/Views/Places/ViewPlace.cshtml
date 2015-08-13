@@ -1,0 +1,25 @@
+﻿@model WebApplication2.Models.Department
+
+@{
+    ViewBag.Title = "ViewPlace";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewPlace</h2>
+
+
+@using (Html.BeginForm("viewplace", "Places", FormMethod.Post))
+{
+
+<div>
+    @Html.TextBoxFor(m => m.depid)
+</div>
+
+<div>
+    @Html.TextBoxFor(m => m.name)
+</div>
+
+@Html.TextBox("submit","sumbit",new { type="submit"})
+
+}
+

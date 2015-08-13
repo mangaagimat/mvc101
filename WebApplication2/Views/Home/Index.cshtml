@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<body>
+    
+    @*post using parameter 
+        <form method="post" action="~/Home/PostParam">
+    @using (Html.BeginForm("PostParam", "Home", FormMethod.Post))
+    {
+        <div>test</div>
+        <div>
+            @Html.TextBox("name")
+        </div>
+
+        <div><button type="submit" name="submit" > submit</button></div>
+    }
+    *@
+
+    @* post using context object GET
+    @using (Html.BeginForm("PostParam1", "Home", FormMethod.Get))
+    {
+        <div>test1</div>
+        <div>
+            @Html.TextBox("name1")
+        </div>
+
+        <div><button type="submit" name="submit"> submit</button></div>
+    }
+
+    *@
+
+
+    post using context object POST
+    @using (Html.BeginForm("conn", "Home", FormMethod.Post))
+    {
+        <div>test1</div>
+        <div>
+            @Html.TextBox("name2")
+        </div>
+
+        @*<div><button type="submit" name="submit1"> submit</button></div>*@
+
+        <div>
+            @Html.TextBox("submit","submit1",new { type="submit"})
+        </div>
+    }
+
+
+
+
+
+
+</body>
